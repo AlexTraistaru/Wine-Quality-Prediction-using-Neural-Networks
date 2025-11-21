@@ -1,6 +1,6 @@
 # Wine Quality Prediction using Neural Networks – Optimization Methods Comparison
 
-This project implements and trains a **single-layer neural network** to predict
+This project implements and trains a single-layer neural network to predict
 white wine quality based on 11 physico-chemical features.  
 Three numerical optimization algorithms are compared during the training
 process: **Gradient Descent**, **Levenberg–Marquardt**, and **Newton’s Method**.
@@ -8,15 +8,15 @@ process: **Gradient Descent**, **Levenberg–Marquardt**, and **Newton’s Metho
 The main objective is to analyze how different optimization strategies affect
 convergence speed, Mean Squared Error, gradient norm, and prediction accuracy.
 
----
 
 ## 1. Problem Overview
 
-We address a supervised **regression** task:
+We address a supervised regression task:
 
-\[
-x \in \mathbb{R}^{11} \longrightarrow \hat{y} = f(Wx) 
-\]
+$$
+x \in \mathbb{R}^{11} \longrightarrow \hat{y} = f(Wx)
+$$
+
 
 where:
 
@@ -28,7 +28,6 @@ Although simple, this architecture qualifies as a **neural network** because
 it consists of an input layer, a weighted linear transformation, and a single
 output neuron.
 
----
 
 ## 2. Dataset
 
@@ -40,7 +39,7 @@ The project uses the `winequality-white.csv` dataset with:
 
 All input features are **standardized** before training.
 
----
+
 
 ## 3. Neural Network Architecture
 
@@ -54,7 +53,7 @@ Even though the activation is linear, the model is trained using methods
 common in neural networks, such as Levenberg–Marquardt and second-order
 optimization.
 
----
+
 
 ## 4. Optimization Methods
 
@@ -75,7 +74,7 @@ Three numerical methods are implemented and compared:
 - Very fast theoretical convergence
 - Requires Hessian regularization for numerical stability
 
----
+
 
 ## 5. Implementation Structure
 
@@ -86,7 +85,6 @@ Typical MATLAB file organization:
 - `levenberg_marquardt.m` – LM implementation
 - `newton_method.m` – Newton implementation
 - `winequality-white.csv` – dataset
-- `plots/` – optional folder for generated graphs
 
 All scripts compute and plot:
 
@@ -97,7 +95,6 @@ All scripts compute and plot:
 
 and display intermediate training logs (iteration 1, 100, ..., 1000).
 
----
 
 ## 6. Training Process
 
@@ -113,7 +110,6 @@ and display intermediate training logs (iteration 1, 100, ..., 1000).
    - Runtime  
    - R² score  
 
----
 
 ## 7. Results Summary
 
